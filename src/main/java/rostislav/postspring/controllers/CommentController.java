@@ -1,14 +1,15 @@
-package rostislav.postspring;
+package rostislav.postspring.controllers;
 
-import Mappers.CommentMapper;
-import Models.Comment;
+import rostislav.postspring.models.Comment;
+import rostislav.postspring.mappers.CommentMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@RequestMapping("/comments")
 public class CommentController {
     @Autowired
     CommentMapper mapper;

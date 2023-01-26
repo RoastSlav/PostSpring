@@ -1,26 +1,27 @@
-package rostislav.postspring;
+package rostislav.postspring.controllers;
 
-import Mappers.PostMapper;
-import Models.Post;
+import rostislav.postspring.mappers.PostMapper;
+import rostislav.postspring.models.Post;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
+@RequestMapping("/posts")
 public class PostController {
     @Autowired
     PostMapper mapper;
 
-    @GetMapping("/")
+    @GetMapping({"/", ""})
     public Post[] allPosts() {
         return mapper.getAllPosts();
     }
 
-    @GetMapping("/posts/{postId}")
+    @GetMapping("/{postId}")
     public Post getPost(@PathVariable Integer postId) {
         return mapper.getPost(postId);
     }
 
-    @GetMapping("/posts/{postId}/comments")
+    @GetMapping("/{postId}/comments")
     public String getCommentsFromPost(@PathVariable Integer postId) {
         return "redirect:comments/" + postId;
     }

@@ -1,4 +1,4 @@
-package Models;
+package rostislav.postspring.models;
 
 public class Comment {
     int id;

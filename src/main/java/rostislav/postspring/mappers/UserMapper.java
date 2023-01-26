@@ -1,6 +1,6 @@
-package Mappers;
+package rostislav.postspring.mappers;
 
-import Models.User;
+import rostislav.postspring.models.User;
 import org.apache.ibatis.annotations.Mapper;
 
 @Mapper

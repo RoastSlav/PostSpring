@@ -1,6 +1,6 @@
-package Mappers;
+package rostislav.postspring.mappers;
 
-import Models.Comment;
+import rostislav.postspring.models.Comment;
 import org.apache.ibatis.annotations.Mapper;
 
 @Mapper

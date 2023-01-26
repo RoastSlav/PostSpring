@@ -4,9 +4,9 @@
         "https://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
     <typeAliases>
-        <typeAlias alias="Post" type="Models.Post"/>
-        <typeAlias alias="Comment" type="Models.Comment"/>
-        <typeAlias alias="User" type="Models.User"/>
+        <typeAlias alias="Post" type="rostislav.postspring.models.Post"/>
+        <typeAlias alias="Comment" type="rostislav.postspring.models.Comment"/>
+        <typeAlias alias="User" type="rostislav.postspring.models.User"/>
     </typeAliases>
     <environments default="development">
         <environment id="development">

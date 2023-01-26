@@ -1,4 +1,4 @@
-package Models;
+package rostislav.postspring.models;
 
 public class Post {
     public int id;
