@@ -15,10 +15,23 @@
         <result property="email" column="email"/>
         <result property="password" column="password"/>
         <result property="salt" column="salt"/>
+        <result property="role" column="role"/>
     </resultMap>
 
     <insert id="createUser" parameterType='User' useGeneratedKeys='true' keyProperty='id'>
-        INSERT INTO users(username, email, password, salt)
-        VALUES (#{username}, #{email}, #{password}, #{salt})
+        INSERT INTO users(username, email, password, salt, role)
+        VALUES (#{username}, #{email}, #{password}, #{salt}, #{role})
     </insert>
+
+    <update id="deactivateUser" parameterType="string">
+        UPDATE users
+        SET active = false
+        WHERE username = #{username}
+    </update>
+
+    <delete id="deleteUser" parameterType="User">
+        DELETE
+        FROM users
+        WHERE id = #{id}
+    </delete>
 </mapper>

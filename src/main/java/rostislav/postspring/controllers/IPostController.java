@@ -3,7 +3,7 @@ package rostislav.postspring.controllers;
 import org.springframework.web.bind.annotation.*;
 import rostislav.postspring.models.Post;
 
-public interface IPost {
+public interface IPostController {
 
     @GetMapping({"/", ""})
     public Post[] allPosts();

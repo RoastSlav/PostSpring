@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/posts")
-public class PostController implements IPost{
+public class PostController implements IPostController {
     @Autowired
     PostMapper mapper;
 
