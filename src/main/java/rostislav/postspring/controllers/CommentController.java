@@ -10,11 +10,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/comments")
-public class CommentController {
+public class CommentController implements IComments {
     @Autowired
     CommentMapper mapper;
 
-    @GetMapping("/{postId}")
     public Comment[] getCommentsFromPost(@PathVariable Integer postId) {
         return mapper.getComment(postId);
     }
